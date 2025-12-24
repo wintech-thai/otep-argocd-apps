@@ -11,6 +11,7 @@ spec:
   tls:
     - hosts:
       - {{ .Values.domainOtepWeb }}
+      secretName: otep-webs-cert
   rules:
     - host: {{ .Values.domainOtepWeb }}
       http:
