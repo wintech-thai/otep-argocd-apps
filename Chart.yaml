@@ -1,0 +1,17 @@
+apiVersion: v2
+name: helm-otep
+description: A Helm chart for Otep
+
+type: application
+version: 1.0.0
+appVersion: "1.0"
+
+dependencies:
+
+  ### Onix Console ###
+  - name: "generic-app"
+    alias: otep-webs
+    condition: otep-webs.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"
+

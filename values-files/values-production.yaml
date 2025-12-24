@@ -1,0 +1,6 @@
+---
+envAlias: production
+envAliasJob: Production
+domainOtepAPI: api.otep.triple-t.co
+domainOtepWeb: web.otep.triple-t.co
+envGroup: prod
