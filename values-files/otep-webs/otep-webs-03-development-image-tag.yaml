@@ -2,4 +2,4 @@
 otep-webs:
   pods:
     image:
-      tag: "v0.0.1"
+      tag: "develop-c61e2c5"
