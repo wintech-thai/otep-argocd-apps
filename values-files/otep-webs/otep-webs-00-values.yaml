@@ -30,10 +30,10 @@ otep-webs:
     image:
       name: asia-southeast1-docker.pkg.dev/its-artifact-commons/otep/otep-webs
 
-    volumeMounts:
-      - name: secrets
-        mountPath: "/secrets"
-        readOnly: true
+    #volumeMounts:
+    #  - name: secrets
+    #    mountPath: "/secrets"
+    #    readOnly: true
 
     #volumes:
     #  - name: secrets
