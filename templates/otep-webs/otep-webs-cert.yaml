@@ -5,7 +5,7 @@ metadata:
 spec:
   secretName: otep-webs-cert
   dnsNames:
-    - {{ .Values.domain }}
+    - {{ .Values.domainOtepWeb }}
   issuerRef:
     name: lets-encrypt-issuer-prod
     kind: ClusterIssuer
