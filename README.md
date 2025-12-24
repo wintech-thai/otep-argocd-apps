@@ -1,1 +1,0 @@
-# otep-argocd-apps

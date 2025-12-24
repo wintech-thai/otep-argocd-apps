@@ -1,0 +1,6 @@
+---
+envAlias: development
+envAliasJob: Development
+domainOtepAPI: api-dev.otep.triple-t.co
+domainOtepWeb: web-dev.otep.triple-t.co
+envGroup: dev
