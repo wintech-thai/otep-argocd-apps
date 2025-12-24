@@ -8,10 +8,16 @@ appVersion: "1.0"
 
 dependencies:
 
-  ### Onix Console ###
+  ### Onix Webs ###
   - name: "generic-app"
     alias: otep-webs
     condition: otep-webs.enabled
     repository: "https://charts.visonneau.fr/"
     version: "0.0.14"
 
+  ### Onix Apis ###
+  - name: "generic-app"
+    alias: otep-apis
+    condition: otep-apis.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.14"
