@@ -15,7 +15,7 @@ spec:
           serviceAccountName: onix-sa
           containers:
           - name: cron-script
-            image: "asia-southeast1-docker.pkg.dev/its-artifact-commons/otep/otep-jobs:{{ .Values.onixJobs.imageTag }}"
+            image: "asia-southeast1-docker.pkg.dev/its-artifact-commons/otep/otep-jobs:{{ .Values.otepJobs.imageTag }}"
             imagePullPolicy: IfNotPresent
             command:
             - bash
