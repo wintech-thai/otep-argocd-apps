@@ -35,7 +35,7 @@ spec:
               value: /secrets/sa.json
 
             - name: PG_USER
-              value: "postgres"
+              value: "bn_metabase"
 
             - name: TARGET_NS
               value: "metabase"
