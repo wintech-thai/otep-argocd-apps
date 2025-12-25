@@ -14,8 +14,34 @@ otep-apis:
       - name: ENV_GROUP
         value: 'prod'
 
-      - name: ENV_RUN
-        value: 'Production'
+      # To solve ulimit(128) issue
+      - name: DOTNET_USE_POLLING_FILE_WATCHER
+        value: "true"
 
-      - name: NODE_ENV
-        value: 'Production'
+      - name: ASPNETCORE_ENVIRONMENT
+        value: "Production"
+
+      - name: IsDev
+        value: "false"
+
+      - name: PostgreSQL__Host
+        value: "postgresql.postgresql-prod.svc.cluster.local"
+
+      - name: PostgreSQL__Database
+        value: "otep-prod"
+
+      - name: PostgreSQL__User
+        value: "postgres"
+
+      - name: PostgreSQL__Password
+        valueFrom:
+          secretKeyRef:
+            name: otep-postgres-secret
+            key: adminPasswordKey
+            optional: false
+
+      - name: Redis__Host
+        value: "redis-master.redis.svc.cluster.local"
+
+      - name: Redis__Port
+        value: "6379"
