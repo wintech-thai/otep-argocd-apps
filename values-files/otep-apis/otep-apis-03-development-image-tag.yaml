@@ -2,4 +2,4 @@
 otep-apis:
   pods:
     image:
-      tag: "develop-2b92434"
+      tag: "main-1ce7f3f"
