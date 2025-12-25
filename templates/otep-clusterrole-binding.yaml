@@ -1,0 +1,13 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: otep-crb-{{ .Values.envAlias }}
+subjects:
+- kind: ServiceAccount
+  name: otep-sa
+  namespace: otep-{{ .Values.envAlias }}
+roleRef:
+  kind: ClusterRole
+  name: otep-cr-{{ .Values.envAlias }}
+  apiGroup: rbac.authorization.k8s.io
