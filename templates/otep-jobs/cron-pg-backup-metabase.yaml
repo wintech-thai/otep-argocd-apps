@@ -1,0 +1,65 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: pg-backup-metabase
+spec:
+  # kubectl create job --from=cronjob/pg-backup-metabase pg-backup-metabase -n otep-production
+  suspend: {{ .Values.backupAdsSuspend }}
+  schedule: "0 */12 * * *" # Every 12 hours
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 3600
+      template:
+        spec:
+          serviceAccountName: otep-sa
+          containers:
+          - name: cron-script
+            image: "pjamenaja/otep-jobs:{{ .Values.otepJobs.imageTag }}"
+            imagePullPolicy: IfNotPresent
+            command:
+            - bash
+            args:
+            - /scripts/backup-postgres-db.bash
+            env:
+            - name: BACKUP_NAME_PREFIX
+              value: "pg"
+
+            - name: EXCLUDE_FLAG
+              value: "YES"
+
+            - name: EXTENSION
+              value: "metabase-{{ .Values.envGroup }}"
+
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /secrets/sa.json
+
+            - name: PG_USER
+              value: "postgres"
+
+            - name: TARGET_NS
+              value: "metabase"
+
+            - name: TARGET_POD
+              value: "postgresql-0"
+
+            - name: GCS_FOLDER
+              value: "db-backup-metabase/{{ .Values.envAlias }}"
+
+            volumeMounts:
+            - name: temp-dir
+              mountPath: /data/temp
+
+            - name: secrets
+              readOnly: true
+              mountPath: "/secrets"
+
+          restartPolicy: OnFailure
+
+          volumes:
+          - name: temp-dir
+            emptyDir: {}
+
+          - name: secrets
+            secret:
+              secretName: gcp-sa-secret
