@@ -32,7 +32,7 @@ spec:
             - name: PG_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: onix-postgres-secret
+                  name: otep-postgres-secret
                   key: adminPasswordKey
                   optional: false
 
