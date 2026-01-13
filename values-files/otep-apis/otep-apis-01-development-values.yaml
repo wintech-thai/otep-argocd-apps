@@ -21,6 +21,9 @@ otep-apis:
       - name: ASPNETCORE_ENVIRONMENT
         value: "Development"
 
+      - name: GOOGLE_APPLICATION_CREDENTIALS
+        value: "/notused/but/need"
+
       - name: IsDev
         value: "true"
 
