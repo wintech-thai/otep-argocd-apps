@@ -46,3 +46,19 @@ otep-apis:
       - name: Redis__Port
         value: "6379"
 
+      - name: MINIO_ENDPOINT
+        value: "https://minio.otep.triple-t.co"
+
+      - name: MINIO_USER
+        valueFrom:
+          secretKeyRef:
+            name: minio-secret
+            key: MINIO_USER
+            optional: false
+
+      - name: MINIO_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: minio-secret
+            key: MINIO_PASSWORD
+            optional: false
