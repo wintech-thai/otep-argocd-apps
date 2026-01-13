@@ -22,6 +22,9 @@ spec:
         - name: ENVIRONMENT 
           value: {{ .Values.envAliasJob }}
 
+        - name: DUMMY
+          value: "001"
+
         - name: TZ
           value: "Asia/Bangkok"
 
