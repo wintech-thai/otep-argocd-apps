@@ -46,8 +46,15 @@ otep-apis:
       - name: Redis__Port
         value: "6379"
 
+
+      - name: MINIO_BUCKET
+        value: "otep-documents-dev"
+
+      - name: MINIO_TLS
+        value: "true"
+
       - name: MINIO_ENDPOINT
-        value: "https://minio.otep.triple-t.co"
+        value: "minio.otep.triple-t.co"
 
       - name: MINIO_USER
         valueFrom:
