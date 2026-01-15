@@ -21,4 +21,4 @@ otep-webs:
         value: 'Production'
 
       - name: NEXT_PUBLIC_API_URL
-        value: 'https://api-dev.otep.triple-t.co'
+        value: 'https://api.otep.triple-t.co'
