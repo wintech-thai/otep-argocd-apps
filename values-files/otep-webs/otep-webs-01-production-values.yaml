@@ -19,3 +19,6 @@ otep-webs:
 
       - name: NODE_ENV
         value: 'Production'
+
+      - name: NEXT_PUBLIC_API_URL
+        value: 'https://api.otep.triple-t.co'
