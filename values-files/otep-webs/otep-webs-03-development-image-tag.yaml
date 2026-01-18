@@ -2,4 +2,4 @@
 otep-webs:
   pods:
     image:
-      tag: "develop-fa624be"
+      tag: "main-f7f912d"
