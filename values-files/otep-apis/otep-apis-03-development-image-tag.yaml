@@ -2,4 +2,4 @@
 otep-apis:
   pods:
     image:
-      tag: "main-e44490a"
+      tag: "develop-2414c13"
