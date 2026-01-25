@@ -28,7 +28,7 @@ otep-webs:
     #  periodSeconds: 10
 
     image:
-      name: asia-southeast1-docker.pkg.dev/its-artifact-commons/otep/otep-webs
+      name: asia-southeast1-docker.pkg.dev/its-artifact-commons/otep/otep-dashboard-fn
 
     #volumeMounts:
     #  - name: secrets
@@ -44,6 +44,6 @@ otep-webs:
     enabled: true
     ports:
       - port: 80
-        targetPort: 3000
+        targetPort: 80
         protocol: TCP
         name: http
