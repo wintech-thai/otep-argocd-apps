@@ -28,7 +28,7 @@ otep-apis:
     #  periodSeconds: 10
 
     image:
-      name: asia-southeast1-docker.pkg.dev/its-artifact-commons/otep/otep-apis
+      name: asia-southeast1-docker.pkg.dev/its-artifact-commons/otep/otep-dashboard-bn
 
     #volumeMounts:
     #  - name: secrets
@@ -44,6 +44,6 @@ otep-apis:
     enabled: true
     ports:
       - port: 80
-        targetPort: 8080
+        targetPort: 3001
         protocol: TCP
         name: http
