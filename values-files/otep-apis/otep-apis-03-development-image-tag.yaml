@@ -2,4 +2,4 @@
 otep-apis:
   pods:
     image:
-      tag: "latest"
+      tag: "development-9b29818"
