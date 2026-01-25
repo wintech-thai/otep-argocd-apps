@@ -2,4 +2,4 @@
 otep-apis:
   pods:
     image:
-      tag: "latest"
+      tag: "production-2a67f3c"
