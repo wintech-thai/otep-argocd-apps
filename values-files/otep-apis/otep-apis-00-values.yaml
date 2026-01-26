@@ -30,15 +30,13 @@ otep-apis:
     image:
       name: asia-southeast1-docker.pkg.dev/its-artifact-commons/otep/otep-dashboard-bn
 
-    #volumeMounts:
-    #  - name: secrets
-    #    mountPath: "/secrets"
-    #    readOnly: true
+    volumeMounts:
+      - name: temp-dir
+        mountPath: /data/temp
 
-    #volumes:
-    #  - name: secrets
-    #    secret:
-    #      secretName: gcp-sa-secret
+    volumes:
+      - emptyDir: {}
+        name: temp-dir
 
   service:
     enabled: true
