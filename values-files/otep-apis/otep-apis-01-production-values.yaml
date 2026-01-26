@@ -33,7 +33,7 @@ otep-apis:
         value: 'false'
 
       - name: DB_HOST
-        value: 'postgresql.postgresql-prod.cluster.cluster.local'
+        value: 'postgresql.postgresql-prod.svc.cluster.local'
 
       - name: DB_PORT
         value: '5432'
