@@ -16,3 +16,52 @@ otep-apis:
 
       - name: TEMP_DIR
         value: '/data/temp'
+
+      - name: PORT
+        value: '3001'
+
+      - name: NODE_ENV
+        value: 'development'
+
+      - name: CORS_ORIGIN
+        value: 'http://localhost:5173,https://web-dev.otep.triple-t.co'
+
+      - name: MAX_FILE_SIZE
+        value: '10485760'
+
+      - name: DEBUG
+        value: 'true'
+
+
+      - name: DB_HOST
+        value: 'postgresql.postgresql-dev.cluster.cluster.local'
+
+      - name: DB_PORT
+        value: '5432'
+
+      - name: DB_USER
+        value: 'postgres'
+
+      - name: DB_NAME
+        value: 'otep-dev'
+
+      - name: DB_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: otep-postgres-secret
+            key: adminPasswordKey
+            optional: false
+
+      - name: JWT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: otep-secret
+            key: JWT_SECRET
+            optional: false
+
+      - name: SESSION_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: otep-secret
+            key: SESSION_SECRET
+            optional: false
