@@ -23,7 +23,7 @@ otep-apis:
       - name: NODE_ENV
         value: 'development'
 
-      - name: CORS_ORIGIN
+      - name: CORS_ORIGINS
         value: 'http://localhost:5173,https://web-dev.otep.triple-t.co'
 
       - name: MAX_FILE_SIZE
