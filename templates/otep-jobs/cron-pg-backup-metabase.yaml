@@ -5,7 +5,7 @@ metadata:
   name: pg-backup-metabase
 spec:
   # kubectl create job --from=cronjob/pg-backup-metabase pg-backup-metabase -n otep-production
-  suspend: {{ .Values.backupAdsSuspend }}
+  suspend: true
   schedule: "0 */12 * * *" # Every 12 hours
   jobTemplate:
     spec:
