@@ -4,3 +4,6 @@ envAliasJob: Production
 domainOtepAPI: api.otep.triple-t.co
 domainOtepWeb: web.otep.triple-t.co
 envGroup: prod
+
+domainOtepAPI2: ddc-api.otep.go.th
+domainOtepWeb2: ddc.otep.go.th
