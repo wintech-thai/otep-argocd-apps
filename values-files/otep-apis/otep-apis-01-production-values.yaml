@@ -24,7 +24,7 @@ otep-apis:
         value: 'production'
 
       - name: CORS_ORIGINS
-        value: 'http://localhost:5173,https://web.otep.triple-t.co'
+        value: 'http://localhost:5173,https://web.otep.triple-t.co,https://ddc.otep.go.th'
 
       - name: MAX_FILE_SIZE
         value: '10485760'
