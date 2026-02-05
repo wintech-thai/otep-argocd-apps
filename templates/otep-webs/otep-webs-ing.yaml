@@ -39,7 +39,7 @@ spec:
   tls:
     - hosts:
       - {{ .Values.domainOtepWeb2 }}
-      secretName: otep-webs-cert2
+      secretName: otep-provided-tls #ใช้ secret ที่ otep จัดการให้
   rules:
     - host: {{ .Values.domainOtepWeb2 }}
       http:
