@@ -21,4 +21,4 @@ otep-webs:
         value: 'Production'
 
       - name: NEXT_PUBLIC_API_URL
-        value: 'https://api.otep.triple-t.co' # เปลี่ยนเป็น https://ddc-api.otep.go.th ก็ได้ในอนาคต
+        value: 'https://ddc-api.otep.go.th'
