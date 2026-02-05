@@ -38,7 +38,7 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-      - {{ .Values.domainOtepWeb }}
+      - {{ .Values.domainOtepWeb2 }}
       secretName: otep-webs-cert2
   rules:
     - host: {{ .Values.domainOtepWeb2 }}
