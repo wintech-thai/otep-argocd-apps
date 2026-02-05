@@ -2,4 +2,4 @@
 otep-webs:
   pods:
     image:
-      tag: "production-6c045df"
+      tag: "production-f279934"
