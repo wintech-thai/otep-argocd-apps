@@ -64,3 +64,37 @@ otep-apis:
             name: otep-secret
             key: SESSION_SECRET
             optional: false
+
+      ### SMTP ###
+      - name: SMTP_HOST
+        valueFrom:
+          secretKeyRef:
+            name: otep-secret
+            key: SMTP_HOST
+            optional: false
+
+      - name: SMTP_USER
+        valueFrom:
+          secretKeyRef:
+            name: otep-secret
+            key: SMTP_USER
+            optional: false
+
+      - name: SMTP_PASS
+        valueFrom:
+          secretKeyRef:
+            name: otep-secret
+            key: SMTP_PASS
+            optional: false
+
+      - name: SMTP_PORT
+        value: '587'
+
+      - name: SMTP_SECURE
+        value: 'false'
+
+      - name: EMAIL_FROM
+        value: 'OTEP System <ddc@otep.go.th>'
+
+      - name: OTP_SEND_EMAILE
+        value: 'true'
