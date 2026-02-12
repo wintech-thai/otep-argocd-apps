@@ -95,7 +95,7 @@ otep-apis:
         value: 'false'
 
       - name: EMAIL_FROM
-        value: 'OTEP System (Dev) <ddc@otep.go.th>'
+        value: 'OTEP System (Test) <ddc@otep.go.th>'
 
       - name: OTP_SEND_EMAILE
         value: 'true'
