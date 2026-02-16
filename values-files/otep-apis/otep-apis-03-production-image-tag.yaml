@@ -2,4 +2,4 @@
 otep-apis:
   pods:
     image:
-      tag: "production-6a37dd2"
+      tag: "production-9d024c2"
