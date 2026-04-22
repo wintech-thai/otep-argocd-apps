@@ -88,6 +88,9 @@ otep-apis:
             key: SMTP_PASS
             optional: false
 
+      #- name: SMTP_REQUIRE_TLS
+      #  value: 'false'
+
       - name: SMTP_PORT
         value: '587'
 
