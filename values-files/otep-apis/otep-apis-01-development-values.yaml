@@ -101,4 +101,4 @@ otep-apis:
         value: 'OTEP System (Test) <ddc@otep.go.th>'
 
       - name: OTP_SEND_EMAIL
-        value: 'false'
+        value: 'true' #'false'
