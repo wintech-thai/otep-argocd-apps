@@ -71,7 +71,7 @@ otep-apis:
         valueFrom:
           secretKeyRef:
             name: otep-secret
-            key: SMTP_HOST
+            key: SMTP_HOST_NEW
             optional: false
 
       - name: SMTP_USER
@@ -85,7 +85,7 @@ otep-apis:
         valueFrom:
           secretKeyRef:
             name: otep-secret
-            key: SMTP_PASS
+            key: SMTP_PASS_NEW
             optional: false
 
       #- name: SMTP_REQUIRE_TLS
