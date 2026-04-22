@@ -85,14 +85,14 @@ otep-apis:
         valueFrom:
           secretKeyRef:
             name: otep-secret
-            key: SMTP_PASS_NEW
+            key: SMTP_PASS
             optional: false
 
-      - name: SMTP_REQUIRE_TLS
-        value: 'false'
+      #- name: SMTP_REQUIRE_TLS
+      #  value: 'false'
 
       - name: SMTP_PORT
-        value: '25'
+        value: '587'
 
       - name: SMTP_SECURE
         value: 'false'
@@ -101,4 +101,4 @@ otep-apis:
         value: 'OTEP System (Test) <ddc@otep.go.th>'
 
       - name: OTP_SEND_EMAIL
-        value: 'false'
+        value: 'true' #'false'
