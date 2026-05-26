@@ -2,4 +2,4 @@
 otep-webs:
   pods:
     image:
-      tag: "development-4d834d7"
+      tag: "development-28a74eb"
