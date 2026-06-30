@@ -101,3 +101,33 @@ otep-apis:
 
       - name: OTP_SEND_EMAIL
         value: 'true'
+
+
+      ##### EDU
+      - name: EDUID_CLIENT_ID
+        valueFrom:
+          secretKeyRef:
+            name: otep-secret
+            key: EDUID_CLIENT_ID
+            optional: false
+
+      - name: EDUID_CLIENT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: otep-secret
+            key: EDUID_CLIENT_SECRET
+            optional: false
+
+      - name: EDUID_BASE_URL
+        valueFrom:
+          secretKeyRef:
+            name: otep-secret
+            key: EDUID_BASE_URL
+            optional: false
+      
+      - name: EDUID_REDIRECT_URI
+        valueFrom:
+          secretKeyRef:
+            name: otep-secret
+            key: EDUID_REDIRECT_URI
+            optional: false
